@@ -1,3 +1,37 @@
 /* body {
     background: blue;
 } */
+
+h1 {
+    text-align: center;
+}
+.blog-header {
+    line-height: 1;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.blog-footer {
+    padding: 2.5rem 0;
+    color: #727272;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-top: 0.05rem solid #e5e5e5;
+}
+
+.img-thumbnail {
+    width:200px;
+    height:250px;
+}
+
+.blog-post {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem!important;
+    border-bottom: 1px solid #dee2e6!important;
+}
+/* .col-md-8 {
+    width: 80%;
+}
+
+.col-md-4 {
+    width: 20%;
+} */
