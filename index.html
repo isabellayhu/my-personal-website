@@ -69,10 +69,10 @@
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
                             <strong class="d-inline-block mb-2 text-primary">Blog</strong>
-                            <h3 class="mb-0">Phase 0 Portfolio Project Reflection</h3>
-                            <div class="mb-1 text-muted">Apr 3</div>
-                            <p class="card-text mb-auto">Now I’ve started a software engineering bootcamp course with Academy Xi...</p>
-                            <a href="#blog2" class="stretched-link">Continue reading</a>
+                            <h3 class="mb-0">Phase 1 Portfolio Project Reflection</h3>
+                            <div class="mb-1 text-muted">May 29</div>
+                            <p class="card-text mb-auto">Here comes the my second project of the software engineering bootcamp...</p>
+                            <a href="#blog3" class="stretched-link">Continue reading</a>
                         </div>
                         <div class="col-auto d-none d-lg-block">
                             <img src="https://images.unsplash.com/photo-1600256697399-99034be0ef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjM1fHxtaXJyb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="img-thumbnail" alt="reflection">
@@ -83,14 +83,14 @@
                 <div class="col-md-6">
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
-                            <strong class="d-inline-block mb-2 text-success">Other</strong>
+                            <strong class="d-inline-block mb-2 text-success">APP</strong>
                             <h3 class="mb-0">Post title</h3>
-                            <div class="mb-1 text-muted">MMM DD</div>
-                            <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-                            <a href="#" class="stretched-link">Continue reading</a>
+                            <div class="mb-1 text-muted">May 29</div>
+                            <p class="mb-auto">Welcome to my very first APP - Coordinates Finder</p>
+                            <a href="https://isabellayhu.github.io/JS-Project-API/" class="stretched-link">Continue reading</a>
                         </div>
                         <div class="col-auto d-none d-lg-block">
-                            <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            <img src="./Images/GeoConvert.png" class="img-thumbnail" alt="APP">
                         </div>
                     </div>
                 </div>
@@ -170,6 +170,52 @@
                         </ol>
                     </article>
 
+                    <article class="blog-post" id="blog3">
+                        <h2 class="blog-post-title">Phase 1 Portfolio Project Reflection</h2>
+                        <p class="blog-post-meta">May 29, 2022 by Isabella</p>
+
+                        <p>Here comes the my second project of the software engineering bootcamp, we’ve been challenged to build a single page application to allow interactions with data from a public API. During initial planning, I had two ideas with similar concept, where the web application will take a location, either return its weather details or put a pin on the map.</p>
+                        <P>My great dreams had soon woken by hash realities. Upon investigating a number of weather and map APIs, I came to the realisation that all of them require geographic coordinates as input parameters. Consider my skill level and time constrains on the project, choices became:</P>
+                        <ol>
+                            <li><strong>User to enter geo coordinates and the APP returns weather details or map location.</strong>This would be more aligned with my original vision, but requires high user effort to have the geo-coordinates before able to use the APP. Meaning more trouble for me when it comes to demo time. On top of that, properly displaying weather icons and maps would be a different level of challenge.</li>
+                            <li><strong>User to look up a location by name and the APP returns its geographic coordinates.</strong>Nothing fancy, but satisfies the project requirements and can be built on in the future if I still want a map out of it.</li>
+                        </ol>
+                        <p>The preference was clear and decision was quick. I went with the 2nd option and please welcome to my very first APP - <a href="https://isabellayhu.github.io/JS-Project-API/">Coordinates Finder</a>. As you typing up a location name, it will come up with some locations matches/suggestions for you to select. Once selected, you can click search icon to find its coordinates.</p>
+
+                        <h5>1) What went well? Key Learning.</h5>
+                        <p>Took learnings from last project, I’ve again linked my html with Bootstrap’s stylesheet. But this time, I’ve also spent sometime looked into its forms docs and unitised it’s search icon. When it came to coding time, my frontend form was completed rather smoothly with very limited style overwrites required.</p>
+                        <p>After created remote repository, instead of then create the local directory and link them together, this time, I simply used ‘git clone’. Works a treat!</p>
+
+                        <h5>2) What could have been improved?</h5>
+                        <p>If time allows, there are a couple of issues I’d like to fix.</p>
+                        <ul>
+                            <li>After user selected the best match address, the APP would still update and provide a list of suggestions based on the address selected. Would be good to stop the ‘fetchSuggestion()’ function once an option is selected.</li>
+                            <li>If when user types in a location, but presses enter or search icon without selecting any of suggested options, the APP would run into an Uncaught TypeError as the search key not matching with any of the stored results. However, nothing would happen in the frontend. The ideal outcome in such situation would be either an alert pops up asking user to select an option listed or return coordinates of 1st option when nothing is selected.</li>
+                        </ul>
+                        <p>Style wise, a more obvious feedback indicating a search is completed would be nice. A randomly updated background image is also a cool idea.</p>
+
+                        <h5>3) The key take aways.</h5>
+                        <p>Some interesting findings through this project.</p>
+                        <ul>
+                            <li>The ‘debugger’ statement and ‘console.log()’ have been useful in this project. In particular when inspecting fetched data from API.</li>
+                            <li>When working with ‘keyup’ event and creating options, ‘replaceChild()’ should be used instead of ‘appendChild()’ otherwise you would end up a very long list of options.</li>
+                            <li>To avoid getting confused with the forever growing variables, visualising functions as building blocks with input and output. Limiting too many global variables and concentrate on variables within a function really helps.</li>
+                        </ul>
+
+                        <h5>4) The process you followed?</h5>
+                        <p>For this project, I’ve again followed along the tips and guidelines on Canvas. </p>
+                        <ol>
+                            <li>Planed out features for my APP and sketched how I wanted the website to look like.</li>
+                            <li>Investigated some public API, went back to the sketch board and updated the plan.</li>
+                            <li>Created a remote repository on GitHub and created local repository using ‘git clone’.</li>
+                            <li>Added basic html, css and js files and connected Bootstrap stylesheet.</li>
+                            <li>Built with the user form in index.html and overrode some styles.</li>
+                            <li>Created an account with <a href="https://www.mapbox.com/">mapbox.com</a> and obtained an access token.</li>
+                            <li>Wrote a fetch function to query geographic data from Mapbox Geocoding API.</li>
+                            <li>Displayed address suggestions and stored suggestions in a result object.</li>
+                            <li>Finally, allowed searching in result and output geo-coordinates.</li>
+                        </ol>
+                    </article>
                     <!-- <nav class="blog-pagination" aria-label="Pagination">
                         <a class="btn btn-outline-primary" href="#">Older</a>
                         <a class="btn btn-outline-secondary disabled">Newer</a>
