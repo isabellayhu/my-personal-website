@@ -69,10 +69,10 @@
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
                             <strong class="d-inline-block mb-2 text-primary">Blog</strong>
-                            <h3 class="mb-0">Phase 1 Portfolio Project Reflection</h3>
-                            <div class="mb-1 text-muted">May 29</div>
-                            <p class="card-text mb-auto">Here comes the my second project of the software engineering bootcamp...</p>
-                            <a href="#blog3" class="stretched-link">Continue reading</a>
+                            <h3 class="mb-0">Phase 2 Portfolio Project Reflection</h3>
+                            <div class="mb-1 text-muted">Jul 17</div>
+                            <p class="card-text mb-auto">We’ve now been introduced to React.Same as the Javascript phase...</p>
+                            <a href="#blog4" class="stretched-link">Continue reading</a>
                         </div>
                         <div class="col-auto d-none d-lg-block">
                             <img src="https://images.unsplash.com/photo-1600256697399-99034be0ef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjM1fHxtaXJyb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="img-thumbnail" alt="reflection">
@@ -84,7 +84,7 @@
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
                             <strong class="d-inline-block mb-2 text-success">APP</strong>
-                            <h3 class="mb-0">Post title</h3>
+                            <h3 class="mb-0">JS Coordinates Finder</h3>
                             <div class="mb-1 text-muted">May 29</div>
                             <p class="mb-auto">Welcome to my very first APP - Coordinates Finder</p>
                             <a href="https://isabellayhu.github.io/JS-Project-API/" class="stretched-link">Continue reading</a>
@@ -214,6 +214,54 @@
                             <li>Wrote a fetch function to query geographic data from Mapbox Geocoding API.</li>
                             <li>Displayed address suggestions and stored suggestions in a result object.</li>
                             <li>Finally, allowed searching in result and output geo-coordinates.</li>
+                        </ol>
+                    </article>
+
+                    <article class="blog-post" id="blog4">
+                        <h2 class="blog-post-title">Phase 2 Portfolio Project Reflection</h2>
+                        <p class="blog-post-meta">July 17, 2022 by Isabella</p>
+
+                        <p>We’ve now been introduced to React. Same as the Javascript phase, we’ve again been assigned a project to build a single page application using data from an external API, however this time using React.</p>
+                        <P>Instead of working on a new idea, I’ve decided to again build a Coordinate Finder APP same as last project with some additional features (listed).</P>
+                        <ul>
+                            <li>Home/welcome route to access the APP.</li>
+                            <li>Save function to post coordinates result to a JSON mock up backend server.</li>
+                            <li>Record file route to view those saved places.</li>
+                        </ul>
+                        
+                        <h5>1) What went well? Key Learning.</h5>
+                        <p>As an improvement from last project, a randomly updated background image been added to this APP. To ensure contents are clearly displayed over the background image, a white transparent ‘Card’ was added as a container for the body of the APP.</p>
+                        <p>Yarn was used for this project and turned out to be a great replacement of NPM. It performs much faster when comes to package installations, with no security vulnerability warnings like when using NPM.</p>
+                        <p>I’ve also been introduced to a useful Chrome DevTools extension for React, the <a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en">React Developer Tools</a>. Its Components tab shows all components rendered in a tree with their current props and state. </p>
+
+                        <h5>2) What could have been improved?</h5>
+                        <p>At this stage, the APP and its mock up backend server are only running in development mode. Ideally would be good to deploy the APP for public use. Until then, others will need to fork the repository, then use ‘yarn start’ & ‘yarn json-server’ to run the APP. Alternatively for anyone who is interested to see the APP running, here is a demo video:</p>
+                        <iframe src="https://flip.com/s/Q3Nm3_bHbhnd" title="Demo: React Coordinate Finder APP" allowfullscreen></iframe>
+                        <p>Function wise, the APP currently allows you to save empty records, which should’ve been rejected or ignored.</p>
+
+                        <h5>3) The key take aways.</h5>
+                        <p>Here are some key learnings from this project.</p>
+                        <ul>
+                            <li>Previously discovered short cut where first create remote repository then git clone local directory, to avoid those steps of creating local directory and connecting with the remote GitHub repository, does not work when using <a href="https://github.com/facebook/create-react-app">create-react-app</a> generator to create a new APP.</li>
+                            <li>Always look for the latest documentations. For instance, with the use of <a href="https://reactrouter.com/">react-router</a> the latest documentation link provided is for dom v4, where ‘Switch’ component no longer work and was replaced by ‘Routes’ in its latest upgrade v6.</li>
+                        </ul>
+
+                        <h5>4) The process you followed?</h5>
+                        <p>Steps I went through creating this APP are:</p>
+                        <ol>
+                            <li>Setup basic file structure using <a href="https://github.com/facebook/create-react-app">create-react-app</a>.</li>
+                            <li>Created a remote repository on GitHub and connected with the local repository.</li>
+                            <li>Installed <a href="https://reactrouter.com/">react-router-dom</a> and added Home & Main routes.</li>
+                            <li>Installed <a href="https://react-bootstrap.github.io/">react-bootstrap</a>, react-bootstrap-icons and imported Bootstrap stylesheet.</li>
+                            <li>Added basic html elements (header, navigation, forms & buttons) to Home and Main components.</li>
+                            <li>Created SearchForm and ResultForm child components in Main.</li>
+                            <li>Added a fetch function in SearchForm to query geographic data from <a href="https://mapbox.com">Mapbox Geocoding API</a> when changes are made to the search bar.</li>
+                            <li>Created DataList child component in SearchForm, rendering search suggestions from the fetched data.</li>
+                            <li>Update & pass state values back to Main to be accessed by ResultForm when SearchForm is submitted.</li>
+                            <li>Display geo-coordinates in ResultForm.</li>
+                            <li>Created a mock up backend using ’yarn add json-server --dev’ and posting places results when the Save button is clicked.</li>
+                            <li>Introduced a new SavedPlaces route to the App to display backend data in a table.</li>
+                            <li>Finally finished the App with some background styling.</li>
                         </ol>
                     </article>
                     <!-- <nav class="blog-pagination" aria-label="Pagination">
