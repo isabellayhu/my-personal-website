@@ -69,10 +69,10 @@
                     <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
                         <div class="col p-4 d-flex flex-column position-static">
                             <strong class="d-inline-block mb-2 text-primary">Blog</strong>
-                            <h3 class="mb-0">Phase 2 Portfolio Project Reflection</h3>
-                            <div class="mb-1 text-muted">Jul 17</div>
-                            <p class="card-text mb-auto">We’ve now been introduced to React.Same as the Javascript phase...</p>
-                            <a href="#blog4" class="stretched-link">Continue reading</a>
+                            <h3 class="mb-0">Phase 3 Portfolio Project Reflection</h3>
+                            <div class="mb-1 text-muted">Sep 24</div>
+                            <p class="card-text mb-auto">We’ve been learning Ruby in this phase. While we need to again utilize data from an external API ...</p>
+                            <a href="#blog5" class="stretched-link">Continue reading</a>
                         </div>
                         <div class="col-auto d-none d-lg-block">
                             <img src="https://images.unsplash.com/photo-1600256697399-99034be0ef04?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjM1fHxtaXJyb3J8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" class="img-thumbnail" alt="reflection">
@@ -264,6 +264,50 @@
                             <li>Finally finished the App with some background styling.</li>
                         </ol>
                     </article>
+
+                    <article class="blog-post" id="blog5">
+                        <h2 class="blog-post-title">Phase 3 Portfolio Project Reflection</h2>
+                        <p class="blog-post-meta">September, 2022 by Isabella</p>
+
+                        <p>We’ve been learning Ruby in this phase. While we need to again utilize data from an external API, project for this phase is asking to build Command Line Interface (CLI) application instead. You probably have guessed it, I’ve build the Coordinate Finder APP again using the same Mapbox Geocoding API.</p>
+                        <P>Here is the link to the repository (<a href="http://github.com/isabellayhu/CLI-app">CLI APP</a>)</P>
+                        <ol>
+                            <li>The user will first be asked to enter a name or address to see a list of places matching that search text.</li>
+                            <li>User can then key a Place ID from that list to view the coordinates of that place.</li>
+                        </ol>
+                        
+                        <h5>1) What went well? Key Learning.</h5>
+                        <p>Without concerning much over the visual presentation, this project was completed rather quickly.</p>
+                        <p>Prior to the project, Mentor walked us through a simple example, which helped as a jump start for my codings. Two key discoveries from that sessions are:</p>
+                        <ul>
+                            <li>Test-driven development (TDD), i.e. adding APP feature begins by writing its test. It focus on user cases and requirements before code. </li>
+                            <li><a href="https://www.postman.com/">Postman</a>, an API platform. While it has many features for building and using APIs, in this particular project, I’ve used Postman to view API responses, help setting my class attributes and arranging test data.</li>
+                        </ul>
+
+                        <h5>2) What could have been improved?</h5>
+                        <p>An error message has been included in the 2nd step, when the ID user entered does not match with any of the Place IDs listed, APP will return a message “Place ID not found!”.</p>
+                        <p>However, it would be good if 1st step could also include some designed errors. At the moment when nothing matches with the search text, APP would return an empty list and still move to the next step asking to enter a Place ID. In certain scenarios, it will even return a long system error indicating the URI is invalid. Ideally, if there is no API response with the search text, a more descriptive error message should be displayed to instruct user to enter a different search text.  </p>
+
+                        <h5>3) The key take aways.</h5>
+                        <p>Here are some key learnings from this project.</p>
+                        <ul>
+                            <li>Class vs Instance methods: Class methods are always defined as “def self.method_name” whereas Instance methods do not come with the “self.”. By definition and in this project, Class methods are used to fetch & convert API responses into a collection of objects, i.e. places. Instance methods are then used to find and print those places instances.</li>
+                            <li>break vs exit statements: exit statement stops the whole program while the break statement allows us to continue the rest of the program outside of the loop. In this project, break statement is used to go back to the place list search step.</li>
+                        </ul>
+
+                        <h5>4) The process you followed?</h5>
+                        <p>Steps I went through creating this APP are:</p>
+                        <ol>
+                            <li>Created a remote repository on GitHub and created local repository using ‘git clone’.</li>
+                            <li>Created Gemfile and installed gems.</li>
+                            <li>Configured the environment.</li>
+                            <li>Added basic APP features using TDD process, introduced Place class, method fetch API responses, method to construct a list of places and method to get place details.</li>
+                            <li>Created bin/places for user interface.</li>
+                            <li>Separated and refined classes, new classes Mapbox and PlaceCollections are introduced, as well as instance methods to find and print places.</li>
+                            <li>Added exit and go back features.</li>
+                            <li>Created README file with instructions on how to use the APP.</li>
+                        </ol>
+                    </article>                    
                     <!-- <nav class="blog-pagination" aria-label="Pagination">
                         <a class="btn btn-outline-primary" href="#">Older</a>
                         <a class="btn btn-outline-secondary disabled">Newer</a>
